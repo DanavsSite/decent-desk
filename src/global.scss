@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap");
+
+$bg: rgb(20 20 20);
+$text: rgb(230 230 230);
+
+* {
+  user-select: none;
+  box-sizing: border-box;
+  color: $text;
+  font-family: "Source Sans Pro", sans-serif;
+  overflow: none;
+}
+#root {
+  background-color: $bg;
+  height: calc(100vh);
+  overflow-y: none !important;
+}

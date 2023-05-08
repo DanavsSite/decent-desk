@@ -1,0 +1,111 @@
+@use "sass:color";
+@import "https://unpkg.com/open-props";
+$menucolor: rgb(30 30 30);
+$text: rgb(230 230 230);
+#l {
+  width: 100dvw;
+  height: 40px;
+  background-color: $menucolor;
+  display: flex;
+  justify-content: space-between;
+  padding-inline: 10px;
+  align-items: center;
+  font-size: large;
+  .logo {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    flex-grow: 1;
+    font-size: 17px;
+    gap: 10px;
+    .logoimg {
+      width: 30px !important;
+      aspect-ratio: 1 / 1;
+    }
+  }
+  .menubar {
+    display: flex;
+    justify-content: flex-start;
+    background-color: $menucolor;
+    flex-grow: 9;
+  }
+  .controls {
+    flex-grow: 5;
+    padding-left: 30px;
+    align-items: center;
+    button {
+      align-items: center;
+      height: 100%;
+    }
+  }
+}
+
+.menutrig {
+  all: unset !important;
+  font-size: medium !important;
+  background-color: $menucolor !important;
+  border: 0 !important;
+  outline: 0 !important;
+  transition: all 0.2s var(--ease-1) !important;
+  padding: 0.2em !important;
+  border: 1px solid rgba(90 90 90 / 0.5) !important;
+  padding-inline: 0.6em !important;
+  border-radius: var(--radius-2) !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 5px !important;
+}
+.menutrig:hover {
+  background-color: color.scale($menucolor, $lightness: 20%) !important;
+}
+.divider {
+  width: 2px;
+  height: 15px;
+  margin-right: 10px;
+  background-color: white;
+}
+.menucontent {
+  background-color: $menucolor !important;
+}
+.menuitem {
+  background-color: $menucolor !important;
+  transition: all 0.2s var(--ease-1) !important;
+  padding-right: 0 !important;
+
+  &:hover {
+    background-color: color.scale($menucolor, $lightness: 20%) !important;
+  }
+  span {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    flex-grow: 1 !important;
+  }
+  span.end {
+    right: 0 !important;
+    .hope-kbd {
+      background-color: rgba(30 30 30 / 0.4) !important;
+    }
+  }
+}
+
+.hope-modal__content {
+  background-color: $menucolor !important;
+}
+.hope-input {
+  color: $text !important;
+}
+.hope-form-label {
+  color: $text !important;
+}
+.hope-select__option {
+  background: $menucolor !important;
+  transition: all 0.2s var(--ease-1) !important;
+
+  &:hover {
+    background-color: color.scale($menucolor, $lightness: 20%) !important;
+  }
+}
+[role="listbox"] {
+  background: $menucolor !important;
+}
